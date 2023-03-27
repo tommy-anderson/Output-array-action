@@ -9796,8 +9796,10 @@ const github = __nccwpck_require__(2726);
 const start = Number(core.getInput('start'))
 const end = Number(core.getInput('end'))
 
-// output a stringified array starting with start and ending with end, inclusive
-core.setOutput("time", JSON.stringify(Array.from({length: end - start + 1}, (v, k) => k + start)));
+console.log(`start: ${start}, end: ${end}`)
+const arr = Array.from({length: end - start + 1}, (v, k) => k + start)
+console.log(`arr: ${arr}`)
+core.setOutput("outputArr", arr);
 })();
 
 module.exports = __webpack_exports__;
