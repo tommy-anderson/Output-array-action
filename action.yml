@@ -1,0 +1,17 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  start:
+    description: 'Starting point of the array'
+    required: false
+    default: '0'
+  end:
+    description: 'End point of the array'
+    required: false
+    default: '10'
+outputs:
+  time: # id of output
+    description: 'Stringified array separated by commas'
+runs:
+  using: 'node16'
+  main: 'index.js'
